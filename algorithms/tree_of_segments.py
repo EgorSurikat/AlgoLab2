@@ -132,10 +132,10 @@ def algorithm(m, persistent_trees, points_x, points_y):
             compressed_x = bin_search(points_x, x)
             compressed_y = bin_search(points_y, y)
 
-            # if compressed_x == -1 or compressed_y == -1:
-            #     print(0, end=" ")
-            # else:
-            #     print(find(persistent_trees[compressed_y + 1], compressed_x), end=" ")
+            if compressed_x == -1 or compressed_y == -1:
+                print(0, end=" ")
+            else:
+                print(find(persistent_trees[compressed_y + 1], compressed_x), end=" ")
     else:
         for _ in range(m):
             x, y = [int(x) for x in input().split()]
